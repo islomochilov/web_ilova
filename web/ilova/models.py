@@ -20,3 +20,15 @@ class Kitob(models.Model):
    
     def __str__(self):
         return self.title
+    
+
+
+class Film(models.Model):
+    title=models.CharField(max_length=256)
+    genre=models.CharField(max_length=256)
+    year=models.IntegerField()
+    rating=models.FloatField()
+    
+   
+    def __str__(self):
+        return self.title

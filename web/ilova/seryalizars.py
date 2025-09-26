@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Yangiliklar, Kitob
+from .models import Yangiliklar, Kitob,Film
 
 
 class YangiliklarSerializer(serializers.ModelSerializer):
@@ -12,4 +12,12 @@ class YangiliklarSerializer(serializers.ModelSerializer):
 class KitobSerializer(serializers.ModelSerializer):
     class Meta:
         model = Kitob
+        fields = '__all__'
+
+
+
+
+class FilmSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Film
         fields = '__all__'

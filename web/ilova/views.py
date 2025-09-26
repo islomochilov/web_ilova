@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Yangiliklar
 from .models import Kitob
+from.models import Film
 from rest_framework import generics
-from .seryalizars import YangiliklarSerializer,KitobSerializer
+from .seryalizars import YangiliklarSerializer,KitobSerializer,FilmSerializer
 # Create your views here.
 
 
@@ -44,4 +45,9 @@ class YangiliklarList(generics.ListAPIView):
 class KitobList(generics.ListAPIView):
     queryset = Kitob.objects.all()
     serializer_class = KitobSerializer
+
+
+class FilmList(generics.ListAPIView):
+    queryset = Film.objects.all()
+    serializer_class = FilmSerializer
 
