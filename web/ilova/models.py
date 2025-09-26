@@ -12,3 +12,11 @@ class Yangiliklar(models.Model):
     def __str__(self):
         return self.title
 
+
+class Kitob(models.Model):
+    title=models.CharField(max_length=256)
+    page_count=models.IntegerField()
+    author=models.CharField(max_length=256)
+   
+    def __str__(self):
+        return self.title
